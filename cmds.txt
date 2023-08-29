@@ -1,0 +1,2 @@
+sort output.txt | cut -d '-' -f 1 | uniq -c
+man select_tut
