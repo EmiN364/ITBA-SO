@@ -3,9 +3,12 @@
 #include <sys/wait.h>
 #include <stdio.h>
 
+/* Modifique la resolución del inciso 3 del ejercicio 2, de manera tal que el proceso padre ejecute p y c (fork y exec) conectando el 
+stdout de p al stdin de c utilizando un pipe (pipe). */
+
 int main(int argc, char *argv[], char *envp[]) {
-    int fds[2]; // pipefd[0] refers to the read end of the pipe.
-                // pipefd[1] refers to the write end of the pipe.
+    int fds[2]; // fds[0] refers to the read end of the pipe.
+                // fds[1] refers to the write end of the pipe.
     if (pipe(fds) < 0) // Creo un pipe, antes del fork asi ambos procesos lo tienen
         return 1;
     int pid = fork();
