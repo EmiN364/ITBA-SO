@@ -4,3 +4,5 @@ man select_tut
 man 7 socket
 
 siempre close y unlink a las shared memorys
+
+importante nombres de semaforos
